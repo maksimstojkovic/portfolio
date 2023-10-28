@@ -9,7 +9,7 @@ module.exports = {
   // Use in production
   // mode: 'production',
 
-  // watch: true,
+  watch: true,
   entry: {
     index: "./src/index.js",
   },
