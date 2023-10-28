@@ -34,8 +34,16 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.svg$/i,
+        type: "asset/resource",
+        // Included to resolve issues locating files
+        generator: {
+          filename: "./img/[name][ext]",
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
