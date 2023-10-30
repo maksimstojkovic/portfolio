@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: "Playfair Display";
+  src: url("fonts/PlayfairDisplay-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
   font-family: "Roboto";
   src: url("fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -108,7 +115,7 @@ section {
   align-items: center;
 
   .photo {
-    --min-size: 300px;
+    --min-size: 320px;
 
     width: 100%;
     max-width: var(--min-size);
@@ -118,6 +125,7 @@ section {
     z-index: 1;
     background: url("./img/display-photo.jpg");
     background-size: contain;
+    border-radius: var(--border-radius);
     box-shadow: 3px 3px var(--padding-x) rgba(0, 0, 0, 0.2);
     text-wrap: nowrap;
 
@@ -127,12 +135,17 @@ section {
     align-items: center;
 
     h1 {
-      margin: 0;
+      margin: 0 0 5px 0;
+      padding: 0 8px;
+
+      border-radius: calc(var(--border-radius) / 2);
 
       font-size: min(2.2rem, 9vw);
       font-weight: bold;
       color: white;
-      -webkit-text-stroke: 0.05rem rgba(0, 0, 0, 1);
+      // -webkit-text-stroke: 0.05rem rgba(0, 0, 0, 1);
+
+      background-color: rgba(0, 0, 0, 0.8);
     }
   }
 
