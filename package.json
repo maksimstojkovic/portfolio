@@ -6,7 +6,7 @@
   "private": "true",
   "scripts": {
     "gh-pages": "git subtree push --prefix dist origin gh-pages",
-    "webpack": "webpack --watch",
+    "webpack": "webpack",
     "test": "jest --watch"
   },
   "keywords": [],

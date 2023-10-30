@@ -9,13 +9,13 @@ module.exports = {
   // Use in production
   // mode: 'production',
 
-  // watch: true,
+  watch: true,
   entry: {
     index: "./src/index.js",
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "docs"),
     // clean: true,
   },
   // plugins: [
@@ -34,8 +34,16 @@ module.exports = {
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|jpg|jpeg|gif)$/i,
         type: "asset/resource",
+      },
+      {
+        test: /\.svg$/i,
+        type: "asset/resource",
+        // Included to resolve issues locating files
+        generator: {
+          filename: "./img/[name][ext]",
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
