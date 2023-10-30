@@ -12,9 +12,17 @@
   font-style: normal;
 }
 
+// SASS VARIABLES
+
+$tablet-breakpoint: 1000px;
+$phone-breakpoint: 500px;
+
 :root,
 html,
 body {
+  // CSS VARIABLES
+  --section-max-width: 1000px;
+
   --h-margin-bottom: 20px;
   --p-margin-bottom: 10px;
   --border-radius: 10px;
@@ -35,7 +43,7 @@ body {
 }
 
 body {
-  margin: 30px;
+  margin: 50px 0;
 }
 
 h1,
@@ -50,7 +58,7 @@ h6 {
   font-family: "Playfair Display";
   font-weight: normal;
 
-  @media (max-width: 1000px) {
+  @media (max-width: $tablet-breakpoint) {
     text-align: center;
   }
 }
@@ -59,9 +67,14 @@ h1 {
   font-size: 2.2rem;
 }
 
+h2 {
+  font-size: 1.4rem;
+}
+
 p {
   margin: 0 0 var(--p-margin-bottom) 0;
 
+  color: #565656;
   line-height: 1.5rem;
 }
 
@@ -73,7 +86,7 @@ p {
 
 section {
   width: 80vw;
-  max-width: 1200px;
+  max-width: var(--section-max-width);
 
   display: flex;
   flex-direction: column;
@@ -88,7 +101,8 @@ section {
 // ABOUT ME
 
 .about-me {
-  --padding: 20px;
+  --padding-x: 30px;
+  --padding-y: 10px;
 
   flex-direction: row;
   align-items: center;
@@ -104,7 +118,7 @@ section {
     z-index: 1;
     background: url("./img/display-photo.jpg");
     background-size: contain;
-    box-shadow: 3px 3px var(--padding) rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 3px var(--padding-x) rgba(0, 0, 0, 0.2);
     text-wrap: nowrap;
 
     display: flex;
@@ -125,9 +139,10 @@ section {
   .content {
     --total-height: 180px;
 
-    min-height: calc(var(--total-height) - 2 * var(--padding));
-    padding: var(--padding);
+    min-height: calc(var(--total-height) - 2 * var(--padding-y));
+    padding: var(--padding-y) var(--padding-x);
 
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 
     display: flex;
@@ -144,7 +159,7 @@ section {
   }
 }
 
-  @media (max-width: 1000px) {
+@media (max-width: $tablet-breakpoint) {
   .about-me {
     flex-wrap: wrap;
 
@@ -164,7 +179,69 @@ section {
   }
 }
 
-// MY WORK
+// PORTFOLIO
 
-.my-work {
+.portfolio {
+  .projects {
+    --gap-x: 30px;
+    --gap-y: 50px;
+
+    display: grid;
+    grid-template-columns: repeat(
+      auto-fill,
+      minmax(calc((var(--section-max-width) - 3 * var(--gap-x)) / 3), 1fr)
+    );
+    gap: var(--gap-y) var(--gap-x);
+
+    @media (max-width: $tablet-breakpoint) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $phone-breakpoint) {
+      grid-template-columns: 1fr;
+    }
+
+    .card {
+      border-radius: var(--border-radius);
+
+      box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+
+      .project-screenshot {
+        min-height: 150px;
+        min-width: 100%;
+
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+
+        color: white;
+      }
+
+      &:nth-child(2n + 1) .project-screenshot {
+        background-color: #9e1c1c;
+      }
+
+      &:nth-child(2n) .project-screenshot {
+        background-color: #7c75ca;
+      }
+
+      .project-details {
+        padding: 20px;
+
+        .project-header {
+          margin-bottom: 10px;
+
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          h2 {
+            margin: 0;
+
+            text-align: left;
+
+            flex: 1;
+          }
+        }
+      }
+    }
+  }
 }
