@@ -142,8 +142,10 @@ section {
       gap: 20px;
     }
   }
+}
 
   @media (max-width: 1000px) {
+  .content {
     flex-wrap: wrap;
 
     .photo {
