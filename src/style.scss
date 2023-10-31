@@ -134,12 +134,8 @@ section {
     align-items: center;
 
     .photo {
-      --min-size: 320px;
-
-      width: 100%;
-      max-width: var(--min-size);
+      width: min(320px, 100%);
       aspect-ratio: 1;
-      // min-height: var(--min-size);
 
       z-index: 1;
       background: url("./img/display-photo.jpg");
@@ -159,7 +155,7 @@ section {
 
         border-radius: calc(var(--border-radius) / 2);
 
-        font-size: min(2.2rem, 9vw);
+        font-size: min(2.2rem, 7.5vw);
         font-weight: bold;
         color: white;
         // -webkit-text-stroke: 0.05rem rgba(0, 0, 0, 1);
@@ -178,6 +174,7 @@ section {
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 
+    flex: 1;
     display: flex;
     flex-direction: column;
 
@@ -200,7 +197,7 @@ section {
 
 @media (max-width: $tablet-breakpoint) {
   .about-me .section-wrapper {
-    flex-wrap: wrap;
+    flex-direction: column;
 
     .photo {
       margin-bottom: 30px;
@@ -305,6 +302,7 @@ section {
   background-color: #0891b2;
 
   .contact-methods {
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
