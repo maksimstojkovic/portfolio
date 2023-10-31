@@ -93,6 +93,10 @@ section {
   width: min(80vw, var(--section-max-width));
   padding: 25px max(10vw, var(--section-max-width) / 2) 45px;
 
+  &:last-of-type {
+    padding-bottom: 25px;
+  }
+
   display: flex;
   flex-direction: column;
   justify-content: center;
