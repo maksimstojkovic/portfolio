@@ -6,3 +6,4 @@ import "./img/linkedin.svg";
 import "./img/newspaper-variant.svg";
 import "./img/open-in-new.svg";
 import "./img/script-text.svg"
+import "./img/p2p_network.png"
