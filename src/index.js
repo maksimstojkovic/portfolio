@@ -9,6 +9,7 @@ import "./img/open-in-new.svg";
 import "./img/script-text.svg";
 
 import "./img/p2p_energy_trading.png";
+import "./img/jumpcut.png";
 import "./img/battleship.png";
 import "./img/calculator.png";
 import "./img/tictactoe.png";
@@ -19,6 +20,11 @@ import "./img/sitz.png";
 
 const setupLinks = () => {
   const cardInfo = [
+    {
+      cls: "jumpcut",
+      github: null,
+      website: "https://getjumpcut.com",
+    },
     {
       cls: "p2p-energy-trading",
       github: null,
