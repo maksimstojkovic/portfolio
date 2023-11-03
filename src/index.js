@@ -1,5 +1,7 @@
 import "./style.scss";
 
+import "./img/favicon.png";
+
 import "./img/cellphone.svg";
 import "./img/email.svg";
 import "./img/github.svg";
