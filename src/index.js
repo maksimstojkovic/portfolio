@@ -12,6 +12,7 @@ import "./img/script-text.svg";
 
 import "./img/p2p_energy_trading.png";
 import "./img/jumpcut.png";
+import "./img/cv-builder.png";
 import "./img/battleship.png";
 import "./img/calculator.png";
 import "./img/tictactoe.png";
@@ -23,14 +24,19 @@ import "./img/sitz.png";
 const setupLinks = () => {
   const cardInfo = [
     {
+      cls: "p2p-energy-trading",
+      github: null,
+      website: "https://doi.org/10.48550/arXiv.2207.08009",
+    },
+    {
       cls: "jumpcut",
       github: null,
       website: "https://getjumpcut.com",
     },
     {
-      cls: "p2p-energy-trading",
-      github: null,
-      website: "https://doi.org/10.48550/arXiv.2207.08009",
+      cls: "cv-builder",
+      github: "https://github.com/maksimstojkovic/cv-builder",
+      website: "https://maksimstojkovic.github.io/cv-builder/",
     },
     {
       cls: "battleship",
