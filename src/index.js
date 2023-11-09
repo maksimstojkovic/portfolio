@@ -12,6 +12,7 @@ import "./img/script-text.svg";
 
 import "./img/p2p_energy_trading.png";
 import "./img/jumpcut.png";
+import "./img/memory-match.png";
 import "./img/cv-builder.png";
 import "./img/battleship.png";
 import "./img/calculator.png";
@@ -32,6 +33,11 @@ const setupLinks = () => {
       cls: "jumpcut",
       github: null,
       website: "https://getjumpcut.com",
+    },
+    {
+      cls: "memory-match",
+      github: "https://github.com/maksimstojkovic/memory-match",
+      website: "https://maksimstojkovic.github.io/memory-match/",
     },
     {
       cls: "cv-builder",
