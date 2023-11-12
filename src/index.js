@@ -10,7 +10,7 @@ import "./img/newspaper-variant.svg";
 import "./img/open-in-new.svg";
 import "./img/script-text.svg";
 
-import "./img/p2p_energy_trading.png";
+import "./img/p2p-energy-trading.png";
 import "./img/jumpcut.png";
 import "./img/memory-match.png";
 import "./img/cv-builder.png";
