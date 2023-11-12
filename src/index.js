@@ -12,6 +12,7 @@ import "./img/script-text.svg";
 
 import "./img/p2p-energy-trading.png";
 import "./img/jumpcut.png";
+import "./img/shopping-cart.png";
 import "./img/memory-match.png";
 import "./img/cv-builder.png";
 import "./img/battleship.png";
@@ -33,6 +34,11 @@ const setupLinks = () => {
       cls: "jumpcut",
       github: null,
       website: "https://getjumpcut.com",
+    },
+    {
+      cls: "shopping-cart",
+      github: "https://github.com/maksimstojkovic/shopping-cart",
+      website: "https://maksimstojkovic.github.io/shopping-cart/",
     },
     {
       cls: "memory-match",
