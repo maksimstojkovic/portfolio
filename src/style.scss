@@ -106,7 +106,7 @@ section {
 
 .section-wrapper {
   width: min(80%, var(--section-max-width));
-  padding: 25px max(10%, var(--section-max-width) / 2) 45px;
+  padding: 25px 0 45px;
 
   &:last-of-type {
     padding-bottom: 25px;
